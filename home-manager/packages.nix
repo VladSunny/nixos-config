@@ -1,19 +1,32 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    wofi
-    vscode
-    telegram-desktop
+    # Browser
     firefox
     google-chrome
-    vitetris
-    lazygit
-    yandex-disk
-    obsidian
-    cmatrix
-    bat
-    yandex-music
+
+    # Social
+    telegram-desktop
+    wofi
+
+    # IDE
+    vscode
+
+    # CLI
     cava
+    cmatrix
+    vitetris
+
+    # Cloud
+    yandex-disk
+
+    # Self-development
+    obsidian
+
+    # Music
+    yandex-music
+
+    # Formaters
     nixfmt
   ];
 }
