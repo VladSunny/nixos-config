@@ -19,14 +19,16 @@
         enable = true;
         shellAliases = {
             btw = "echo i use nixos btw";
-            nrs = "sudo nixos-rebuild switch";
+            nrs = "sudo nixos-rebuild switch --impure --flake /home/vladg00dman/nixos-config#pc-nixos";
         };
     };
 
     programs.git = {
         enable = true;
-        userName = "VladSunny";
-        userEmail = "vladislavsunny@gmail.com";
+        settings = {
+            user.name = "VladSunny";
+            user.email = "vladislavsunny@gmail.com";
+        };
     };
 
     programs.starship = {
