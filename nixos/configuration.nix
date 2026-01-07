@@ -98,12 +98,12 @@
   ];
 
   hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
+  # services.xserver.videoDrivers = [ "nvidia" ];
+  # hardware.nvidia = {
+  #   modesetting.enable = true;
+  #   open = false;
+  #   package = config.boot.kernelPackages.nvidiaPackages.stable;
+  # };
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";

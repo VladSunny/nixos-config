@@ -1,5 +1,5 @@
 {
-  description = "NixOS + Hyprland + Home Manager";
+  description = "NixOS multi-host with shared config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
@@ -13,12 +13,27 @@
   outputs = { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
-    in {
+    in
+    {
       nixosConfigurations.pc-nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./nixos/configuration.nix
+          ./graphic/NVIDIA.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.vladg00dman = import ./home-manager/home.nix;
+          }
+        ];
+      };
 
+      nixosConfigurations.laptop-nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./graphic/Intel.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
