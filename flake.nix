@@ -10,7 +10,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     let
       system = "x86_64-linux";
     in
