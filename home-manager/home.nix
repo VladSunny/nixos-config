@@ -19,7 +19,8 @@
     enable = true;
     shellAliases = {
       btw = "echo i use nixos btw";
-      nrs = "sudo nixos-rebuild switch --impure --flake /home/vladg00dman/nixos-config#pc-nixos";
+      nrs = "sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
+      nup = "sudo nix flake update /home/&USER/nixos-config && sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
     };
   };
 
@@ -41,7 +42,6 @@
     telegram-desktop
     firefox
     google-chrome
-    nemo
     vitetris
     lazygit
     yandex-disk

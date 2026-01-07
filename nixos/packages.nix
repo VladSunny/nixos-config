@@ -16,6 +16,9 @@
     # Terminal
     kitty
 
+    # File manager
+    nemo
+
     # Other
     home-manager
   ];
