@@ -7,4 +7,8 @@
       nup = "nix flake update --flake /home/$USER/nixos-config && sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
     };
   };
+
+  programs.starship = {
+    enable = true;
+  };
 }
