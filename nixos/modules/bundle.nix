@@ -10,5 +10,6 @@
     ./portal.nix
     ./hyprland.nix
     ./printing.nix
+    ./gc.nix
   ];
 }
