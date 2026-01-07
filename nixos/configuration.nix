@@ -7,6 +7,7 @@
 {
   imports = [
     "/etc/nixos/hardware-configuration.nix"
+    ./packages.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -22,15 +23,6 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Moscow";
-
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  nixpkgs.config.allowUnfree = true;
 
   services.xserver.enable = true;
 
@@ -66,16 +58,6 @@
     enable = true;
     xwayland.enable = true;
   };
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    kitty
-    fastfetch
-    btop
-    home-manager
-  ];
 
   fonts.packages = with pkgs; [
     jetbrains-mono
