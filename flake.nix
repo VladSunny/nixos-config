@@ -17,13 +17,13 @@
       nixosConfigurations.pc-nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.vladg00dman = import ./home.nix;
+            home-manager.users.vladg00dman = import ./home-manager/home.nix;
           }
         ];
       };
