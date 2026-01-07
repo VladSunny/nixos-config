@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./fish.nix
+  ];
+
   home = {
     username = "vladg00dman";
     homeDirectory = "/home/vladg00dman";
@@ -10,17 +14,8 @@
   programs.kitty = {
     enable = true;
     settings = {
-      background_opacity = 0.9;
+      background_opacity = 0.8;
       dynamic_background_opacity = "yes";
-    };
-  };
-
-  programs.fish = {
-    enable = true;
-    shellAliases = {
-      btw = "echo i use nixos btw";
-      nrs = "sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
-      nup = "nix flake update --flake /home/$USER/nixos-config && sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
     };
   };
 
