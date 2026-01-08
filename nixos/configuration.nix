@@ -3,6 +3,10 @@
   ...
 }:
 {
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   imports = [
     "/etc/nixos/hardware-configuration.nix"
     ./packages.nix
