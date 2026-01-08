@@ -11,5 +11,6 @@
     ./hyprland.nix
     ./printing.nix
     ./gc.nix
+    ./throne.nix
   ];
 }
