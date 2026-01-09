@@ -38,7 +38,7 @@
       nixosConfigurations.laptop-nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
           ./graphic/Intel.nix
           home-manager.nixosModules.home-manager
           {
