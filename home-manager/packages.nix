@@ -12,6 +12,10 @@
     # IDE
     vscode
 
+    # Programming stuff
+    uv
+    python3
+
     # CLI
     cava
     cmatrix

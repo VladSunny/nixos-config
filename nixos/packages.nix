@@ -15,10 +15,6 @@
     # File manager
     nemo
 
-    # Programming stuff
-    uv
-    python3
-
     # Other
     home-manager
   ];
