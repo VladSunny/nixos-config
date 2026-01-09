@@ -2,7 +2,7 @@
   imports = [
     "/etc/nixos/hardware-configuration.nix"
     ../nixos/common.nix
-    ../graphic/NVIDIA.nix
+    ../graphic/Intel.nix.nix
   ];
 
   networking.hostName = "laptop-nixos";
