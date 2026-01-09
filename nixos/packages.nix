@@ -17,7 +17,6 @@
 
     # Programming stuff
     uv
-    python3.10
 
     # Other
     home-manager
