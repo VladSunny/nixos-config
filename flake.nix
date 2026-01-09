@@ -24,8 +24,7 @@
       nixosConfigurations.pc-nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./nixos/configuration.nix
-          ./graphic/NVIDIA.nix
+          ./hosts/pc-nixos.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -38,8 +37,7 @@
       nixosConfigurations.laptop-nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./nixos/configuration.nix
-          ./graphic/Intel.nix
+          ./hosts/laptop-nixos.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

@@ -8,7 +8,6 @@
   };
 
   imports = [
-    "/etc/nixos/hardware-configuration.nix"
     ./packages.nix
     ./modules/bundle.nix
   ];
@@ -17,8 +16,6 @@
     "nix-command"
     "flakes"
   ];
-
-  networking.hostName = "pc-nixos";
 
   time.timeZone = "Europe/Moscow";
 
