@@ -17,6 +17,7 @@
 
     # Programming stuff
     uv
+    python3
 
     # Other
     home-manager
