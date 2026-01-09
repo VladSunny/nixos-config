@@ -4,7 +4,6 @@
   lib,
   ...
 }:
-
 {
   services.xserver.videoDrivers = [ "nvidia" ];
 

@@ -1,36 +1,42 @@
-{ pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    # Browser
-    firefox
-    google-chrome
+  pkgs,
+  isNvidia ? false,
+  ...
+}:
+{
+  home.packages =
+    with pkgs;
+    [
+      # Browser
+      firefox
+      google-chrome
 
-    # Social
-    telegram-desktop
-    wofi
+      # Social
+      telegram-desktop
+      wofi
 
-    # IDE
-    vscode
+      # IDE
+      vscode
 
-    # Programming stuff
-    uv
-    python3
+      # Programming stuff
+      uv
+      python3
 
-    # CLI
-    cava
-    cmatrix
-    vitetris
+      # CLI
+      cava
+      cmatrix
+      vitetris
 
-    # Cloud
-    yandex-disk
+      # Cloud
+      yandex-disk
 
-    # Self-development
-    obsidian
+      # Self-development
+      obsidian
 
-    # Music
-    yandex-music
+      # Music
+      yandex-music
 
-    # Formaters
-    nixfmt
-  ];
+      # Formaters
+      nixfmt
+    ];
 }

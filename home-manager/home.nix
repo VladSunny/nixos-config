@@ -1,4 +1,8 @@
 {
+  isNvidia ? false,
+  ...
+}:
+{
   imports = [
     ./packages.nix
     ./fish.nix

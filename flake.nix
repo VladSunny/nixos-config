@@ -35,6 +35,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.vladg00dman = import ./home-manager/home.nix;
+            home-manager.extraSpecialArgs = {
+              isNvidia = true;
+            };
           }
         ];
       };
@@ -48,6 +51,9 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.vladg00dman = import ./home-manager/home.nix;
+            home-manager.extraSpecialArgs = {
+              isNvidia = false;
+            };
           }
         ];
       };
