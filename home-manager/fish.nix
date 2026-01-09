@@ -3,8 +3,8 @@
     enable = true;
     shellAliases = {
       btw = "echo i use nixos btw";
-      nrs = "sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
-      nup = "nix flake update --flake /home/$USER/nixos-config && sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#pc-nixos";
+      nrs = "sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#(hostname)";
+      nup = "nix flake update --flake /home/$USER/nixos-config && sudo nixos-rebuild switch --impure --flake /home/$USER/nixos-config#(hostname)";
     };
   };
 
